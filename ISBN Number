@@ -1,0 +1,35 @@
+# ISBN-Number
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter the number : ");
+		long n=sc.nextLong();
+		long rem;
+		while(n>0)
+		{
+		    long sum=0;
+		    for(int i=1;i<=10;i++)
+		    {
+		        rem=n%10;
+		        sum=sum+rem*i;
+		        n=n/10;
+		    }
+		    if(sum%11==0)
+		    {
+		        System.out.println("ISBN Number");
+		    }
+		    else
+		    {
+		        System.out.println("Not an ISBN Number");
+		    }
+		}
+	}
+}
+output :
+1259060977
+ISBN Number
+
+8147852369
+Not an ISBN Number
